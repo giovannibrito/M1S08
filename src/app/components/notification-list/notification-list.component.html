@@ -1,0 +1,18 @@
+<ntap-header></ntap-header>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let notificacao of notificacoes"
+    [ngClass]="{ lido: notificacao.lido }"
+  >
+    <div class="titulo">{{ notificacao.aplicativo }}</div>
+    <div class="subtitulo">{{ notificacao.mensagem }}</div>
+    <div class="data">{{ notificacao.data }}</div>
+    <button (click)="marcarLido(notificacao)" class="btn btn-primary">
+      Marcar como lido
+    </button>
+  </li>
+</ul>
+
+<ntap-footer></ntap-footer>
